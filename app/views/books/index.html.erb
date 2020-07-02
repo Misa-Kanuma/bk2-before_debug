@@ -1,3 +1,4 @@
+<div class="container">
 <% if @book.errors.any? %>
         <%= @book.errors.count %>件のerrorが発生しました
         <% @book.errors.full_messages.each do |message| %>
@@ -11,7 +12,7 @@
 		<%= render 'users/profile', user: current_user %>
 
 		<h2>New book</h2>
-		<%= render 'books/newform', book: @book %>
+		<%= render 'books/newform', book: Book.new %>
 
 	</div>
 
@@ -44,7 +45,6 @@
 		</table>
 
 		<!--books一覧 -->
-
-
+		</div>
 	</div>
 </div>
